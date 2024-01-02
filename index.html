@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APP</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="bg-black text-white">
+
+    <h1 class="text-center">products</h1>
+    <div class="container  ">
+        <label for="">productName : </label>
+        <input type="text" class="form-control" id="Name">
+        <label for="">productPrice : </label>
+        <input type="text" class="form-control" id="Price">
+        <label for="">productCategory : </label>
+        <input type="text" class="form-control" id="Cat">
+        <label for="">productdescription : </label>
+        <textarea cols="30" rows="5" class="form-control" id="DESC"></textarea>
+        <br>
+        <button class="form-control btn btn-info d-block" id="addbtn" onclick="addProduct()"> Add Product </button>
+        <button class="form-control btn btn-info d-none" id="updatebtn" onclick="updateProducts()"> update Product
+        </button>
+        <input type="text" placeholder="search for product..." class="w-50 m-auto mt-4 form-control" oninput="searchProduct(this.value)">
+        <table class="table mt-5">
+            <thead>
+                <th>name</th>
+                <th>price</th>
+                <th>category</th>
+                <th>description</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tablebody"></tbody>
+
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
